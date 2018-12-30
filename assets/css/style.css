@@ -1,0 +1,242 @@
+body {
+    text-align: center;
+    line-height: 150%;
+    background-image: url(../images/lush-large.jpg);
+    background-position-y: 125px;
+    margin-top: 150px;
+}
+
+/* Style the header div */
+header {
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    height: 250px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+}
+
+/* Style the text inside of the header */
+h1.header {
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+}
+
+h3.header {
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+}
+
+/* Adjust position of the instructions div */
+div.instruct {
+    margin: 115px;
+}
+
+/* Style the text in the instructions div */
+h2.instruct {
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+}
+
+/* Position the container that holds the main content */
+.container {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Style the scoreboard */
+.score {
+    background-color: #333;
+    opacity: .8;
+    position: relative;
+    width: 15%;
+    left: 150px;
+    float: left;
+}
+
+.the-plant {
+    background-color: #333;
+    padding: 25px;
+    opacity: .8;
+    position: relative;
+    width: 80%;
+    right: 150px;
+    float: right;
+}
+
+/* Style the div that holds all of the game play info */
+.guess {
+    background-color: #333;
+    opacity: .8;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    float: both;
+}
+
+h1 {
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+}
+
+h2,
+h3 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 32px;
+}
+
+p {
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+/* Style the endgame screens ("You Win" or "Game Over") that pop up when the user wins or loses */
+#winScreen, 
+#loseScreen {
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.endgame-heading, 
+.endgame-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #d2d3c3;
+    font-size: 36px;
+    margin: 10%;
+}
+
+.endgame-heading {
+    margin-top: 450px;
+    font-family: monospace;
+    font-size: 150px;
+}
+
+button {
+    background-color: #222;
+    color: #fff;
+    font-family: monospace;
+    font-size: 24px;
+    border: 2px solid #fff;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+}
+
+footer {
+    background-color: #333;
+    border-top: 8px solid #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    z-index: 2;
+}
+
+.footer {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 35px; 
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Media Queries */
+/* Medium devices, like desktops and laptops */
+/* @media screen and (max-width: 1550px) {
+    body {
+        background-image: url(../images/smokeyquartz.jpg);
+    }
+    
+    .header {
+        height: 150px;
+    }
+
+    #header {
+        font-size: 100px;
+    }
+    
+    .lets-play {
+        font-size: 48px;
+    }
+
+    .container {
+        margin: 25px 400px;
+    }
+}
+ */
+/* small devices, like tablets and e-readers */
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url(../images/smokeyquartz.jpg);
+        line-height: 200%;
+    }
+
+    .lets-play {
+        font-size: 36px;
+    }
+
+    h2, 
+    h3 {
+        font-size: 24px;
+        text-shadow: 4px 4px 4px #222;
+    }
+
+    footer {
+        height: 100px;
+    }
+}
+ */
+/* extra small devices, like smartphones */
+/* @media screen and (max-width: 480px) {
+    body {
+        line-height: 275%;
+        background-image: url(../images/smokeyquartz.jpg);
+        margin-top: 150px;
+    }
+
+    .header {
+        height: 150px;
+        padding-top: 35px;
+    }
+
+    #header {
+        font-size: 58px;
+    }
+
+    .lets-play,
+    h2 {
+        font-size: 22px;
+        text-shadow: 4px 4px 4px #222;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    footer {
+        height: 75px;
+    }
+} */
