@@ -17,7 +17,7 @@
     <body>
         <header>
             <h1 class="header">Leaf Drop</h1>
-            <h3 class="header">a plant-themed word guess game</h3>
+            <h3 class="header">A plant-themed word guess game</h3>
         </header>
         <br>
         <div class="instruct">
@@ -34,13 +34,13 @@
                 <!-- SCORE -->
                 <div class="score" class="clearfix">
                     <div class="win-count">
-                        <h2>Wins</h2>
+                        <h2 class="scoreboard">Wins</h2>
                         <div>
                             <h3 id="winCount">0</h3>
                         </div>
                     </div>            
                     <div class="loss-count">
-                        <h2>Losses</h2>
+                        <h2 class="scoreboard">Losses</h2>
                         <div>
                             <h3 id="lossCount">0</h3>    
                         </div>
@@ -49,7 +49,8 @@
 
                 <!-- WORD GUESSING AREA -->
                 <div class="the-plant" class="clearfix">
-                    <h3>Name that plant!</h3>
+                    <h2>Name that plant!</h2>
+                    <br>
                     <div>
                         <h2>_ _ _ _ _ _ _ _</h2>
                     </div>
@@ -66,9 +67,14 @@
 
                 <!-- HINT -->
                 <div class="hint">
-                    <h2>Hint</h2>
-                    <!-- This is where an image will be displayed as a hint -->
-                    <img src="https://i.pinimg.com/736x/aa/d5/fd/aad5fd9c4b16a73364bd2a8ead437a03--tropical-interior-plants-indoor.jpg" class="clearfix" style="max-width: 100%"/>
+                    <div class="hint-button">
+                        <button>Hint</button>
+                    </div>
+                    <br>
+                    <div class="hint-img" style="visibility: hidden">
+                        <!-- This is where an image will be displayed as a hint -->
+                        <img src="https://i.pinimg.com/736x/aa/d5/fd/aad5fd9c4b16a73364bd2a8ead437a03--tropical-interior-plants-indoor.jpg" class="clearfix" style="max-width: 100%"/>
+                    </div>
                 </div>
 
                 <!-- GUESSED LETTERS -->

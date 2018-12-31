@@ -8,23 +8,26 @@ const plants = ['monstera',
             'english ivy',
             'devils ivy',
             'rubber plant',
-            'ficus',
+            'zz plant',
             'fiddle leaf fig',
             'succulent',
             'maidenhair fern',
             'jade plant',
-            'philodendron',
+            'heartleaf philodendron',
             'cactus',
             'prayer plant',
             'aloe',
-            'calathea',
+            'pinstripe calathea',
             'bird of paradise',
             'pilea peperomioides',
-            'money tree',
             'rattlesnake plant',
-            'snake plant',
+            'sansevieria',
             'air plant',
-            'tillandsia' 
+            'tillandsia',
+            'staghorn fern',
+            'peperomia',
+            'string of pearls',
+            'burros tail' 
         ]
 
 const plantSets = []
@@ -85,6 +88,9 @@ function keyUpHandler(event) {
     }
 }
 
+// When hint button is clicked, show relevant image
+
+// Have one leaf fall from leaf drop graphic with each incorrect guess
 
 // Display the number of remaining guesses under 'Guesses Remaining'
 console.log('Number of guesses remaining: ' + guessesRemaining);
@@ -94,6 +100,7 @@ document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
 if (guessesRemaining === 0) {
     lose();
 }
+
 function win() {
     console.log('You win!');
     // Display number of wins in browser
