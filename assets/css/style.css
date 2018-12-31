@@ -2,7 +2,6 @@ body {
     text-align: center;
     line-height: 150%;
     background-image: url(../images/lush-large.jpg);
-    background-position-y: 125px;
     margin-top: 150px;
 }
 
@@ -10,30 +9,33 @@ body {
 header {
     text-align: center;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     height: 250px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 100%;
+    z-index: 100;
 }
 
 /* Style the text inside of the header */
-h1.header {
+h1.header,
+h3.header {
     color: #333;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 100px;
 }
 
 h3.header {
-    color: #333;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
 }
 
 /* Adjust position of the instructions div */
 div.instruct {
-    margin: 115px;
+    background-color: transparent;
+    width: 85%;
+    margin: 0 auto;
+    top: 90px;
 }
 
 /* Style the text in the instructions div */
@@ -43,44 +45,81 @@ h2.instruct {
     font-size: 50px;
 }
 
-/* Position the container that holds the main content */
-.container {
+/* General styling for main content divs */
+div {
+    background-color: #333;
+    opacity: .9;
     position: relative;
-    width: 85%;
-    margin: 0 auto;
 }
 
-/* Style the scoreboard */
-.score {
-    background-color: #333;
-    opacity: .8;
-    position: relative;
-    width: 15%;
-    left: 150px;
+/* Position the container that holds the main content */
+div.container {
+    width: 80%;
+    margin: 0 auto;
+    top: 100px;
+}
+
+/* Position the rows */
+div.row-1,
+div.row-2 {
+    background-color: transparent;
+    width: 100%;
     float: left;
 }
 
-.the-plant {
-    background-color: #333;
-    padding: 25px;
-    opacity: .8;
-    position: relative;
-    width: 80%;
-    right: 150px;
+/* ROW 1 */
+/* Style the divs that hold the scoreboard */
+div.score {
+    width: 16%;
+    left: 0;
+    float: left;
+}
+
+/* Style the div that holds the word */
+div.the-plant {
+    left: 2%;
+    right: 2%;
+    width: 55%;
+    margin: 0 auto;
+    float: left;
+    padding-top: 20px;
+}
+
+/* Style the leaf drop graphic */
+div.leaf-drop {
+    width: 25%;
+    right: 0;
     float: right;
 }
 
-/* Style the div that holds all of the game play info */
-.guess {
-    background-color: #333;
-    opacity: .8;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    float: both;
+/* ROW 2 */
+/* Style the hint div */
+div.hint {
+    width: 16%;
+    left: 0;
+    float: left;
 }
 
-h1 {
+/* Style the guessed letters div */
+div.guess {
+    left: 2%;
+    right: 2%;
+    width: 55%;
+    margin: 0 auto;
+    float: left;
+    padding-top: 20px;
+}
+
+div.guesses-remaining {
+    width: 25%;
+    right: 0;
+    float: right;
+}
+
+/* Style the text */
+h1,
+h2,
+h3 {
     color: #fff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 32px;
@@ -88,9 +127,11 @@ h1 {
 
 h2,
 h3 {
-    color: #fff;
     font-family: monospace;
-    font-size: 32px;
+}
+
+h3 {
+    margin-top: 0;
 }
 
 p {

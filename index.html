@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Leaf Drop</title>
-
+        
         <!-- Link to stylesheet -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -24,38 +24,71 @@
             <h2 class="instruct">Guess the name of the houseplant</h1>
             <h2 class="instruct">before you lose your leaves</h1>
         </div>
+        
+        <!-- MAIN CONTENT -->
         <div class="container">
-            <div class="score" class="clearfix">
-                <div class="win-count">
-                    <h2>Wins</h2>
-                    <div>
-                        <h3 id="winCount">0</h3>
-                    </div>
-                </div>            
-                <div class="loss-count">
-                    <h2>Losses</h2>
-                    <div>
-                        <h3 id="lossCount">0</h3>    
-                    </div>
-                </div>
-            </div>
-            <div class="the-plant" class="clearfix">
-                <h3>Name that plant!</h3>
-                <div>
 
-                </div>
-            </div>
-            <div class="guess" class="clearfix">
-                <div class="guessed-letters">
-                    <h2>Guessed Letters</h2>
-                    <div>
-                        <h3 id="guessedLetters">...</h3>
+            <!-- ROW 1 -->
+            <div class="row-1" class="clearfix">
+
+                <!-- SCORE -->
+                <div class="score" class="clearfix">
+                    <div class="win-count">
+                        <h2>Wins</h2>
+                        <div>
+                            <h3 id="winCount">0</h3>
+                        </div>
+                    </div>            
+                    <div class="loss-count">
+                        <h2>Losses</h2>
+                        <div>
+                            <h3 id="lossCount">0</h3>    
+                        </div>
                     </div>
                 </div>
-                <div class="guesses-remaining">
-                    <h2>Number of Guesses Remaining: <h3 id="guessesRemaining"></h3></h2>
+
+                <!-- WORD GUESSING AREA -->
+                <div class="the-plant" class="clearfix">
+                    <h3>Name that plant!</h3>
+                    <div>
+                        <h2>_ _ _ _ _ _ _ _</h2>
+                    </div>
+                </div>
+    
+                <!-- LEAF DROP GRAPHIC -->
+                <div class="leaf-drop">
+                    <img src="https://i.pinimg.com/originals/6f/81/ca/6f81ca6e0d344bde4288737b8ce1c87d.jpg" class="clearfix" style="max-width: 100%"/>
                 </div>
             </div>
+
+            <!-- ROW 2 -->
+            <div class="row-2" class="clearfix">
+
+                <!-- HINT -->
+                <div class="hint">
+                    <h2>Hint</h2>
+                    <!-- This is where an image will be displayed as a hint -->
+                    <img src="https://i.pinimg.com/736x/aa/d5/fd/aad5fd9c4b16a73364bd2a8ead437a03--tropical-interior-plants-indoor.jpg" class="clearfix" style="max-width: 100%"/>
+                </div>
+
+                <!-- GUESSED LETTERS -->
+                <div class="guess" class="clearfix">
+                    <div class="guessed-letters">
+                        <h2>Guessed Letters</h2>
+                        <div>
+                            <h3 id="guessedLetters">...</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GUESSES REMAINING -->
+                <div class="guesses-remaining">
+                    <h2>Guesses Remaining</h2>
+                        <h3 id="guessesRemaining">-</h3>
+                </div>
+            </div>
+
+            <!-- WIN SCREEN AND LOSE SCREEN -->
             <div id="winScreen" style="visibility: hidden">
                 <h1 class="endgame-heading">YOU WIN</h1>
                 <p class="endgame-text">Nice job! Would you like to play again?</p>
