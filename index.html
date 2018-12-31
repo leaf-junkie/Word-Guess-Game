@@ -32,66 +32,102 @@
             <div class="row" class="top" class="clearfix">
 
                 <!-- SCORE -->
-                <div class="column" class="left" class="score" class="clearfix">
-                    <div class="win-count">
-                        <h2 class="scoreboard">Wins</h2>
-                        <div>
-                            <h3 id="winCount">0</h3>
-                        </div>
-                    </div>            
-                    <div class="loss-count">
-                        <h2 class="scoreboard">Losses</h2>
-                        <div>
-                            <h3 id="lossCount">0</h3>    
+                <div class="column-left">
+                    <div class="score" class="clearfix">
+                        <div class="win-count">
+                            <h2 class="scoreboard">Wins: <span id="winCount">0</span></h2>
+                        </div> 
+                        <div class="loss-count">
+                            <h2 class="scoreboard">Losses: <span id="lossCount">0</span></h2>
                         </div>
                     </div>
                 </div>
 
                 <!-- WORD GUESSING AREA -->
-                <div class="column" class="middle" class="the-plant" class="clearfix">
-                    <h2>Name that plant!</h2>
-                    <br>
-                    <div>
-                        <h2>_ _ _ _ _ _ _ _</h2>
+                <div class="column-middle">
+                    <div class="the-plant" class="clearfix">
+                        <h2>Name that plant!</h2>
+                        <br>
+                        <div>
+                            <h2 class="current-plant"></h2>
+                        </div>
                     </div>
                 </div>
     
                 <!-- LEAF DROP GRAPHIC -->
-                <div class="column" class="right" class="leaf-drop">
-                    <img src="../word-guess-game/assets/images/sprites/ficus-10.jpg" class="clearfix" class="right" style="max-width: 100%"/>
+                <div class="column-right">   
+                    <div class="leaf-drop">
+                        <img src="../word-guess-game/assets/images/sprites/ficus-10.jpg" class="clearfix" class="right" style="max-width: 100%"/>
+                    </div>
                 </div>
+            
+            <!-- END ROW 1 -->
             </div>
 
             <!-- ROW 2 -->
             <div class="row" class="bottom" class="clearfix">
 
                 <!-- HINT -->
-                <div class="column" class="left" class="hint">
-                    <div class="hint-button">
-                        <button>Hint</button>
-                    </div>
-                    <br>
-                    <div class="hint-img" style="visibility: ">
-                        <!-- This is where an image will be displayed as a hint -->
-                        <img src="../word-guess-game/assets/images/hints/air-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                <div class="column-left">   
+                    <div class="hint">
+                        <div class="hint-button">
+                            <button>Hint</button>
+                        </div>
+                        <br>
+                        <div class="hint-img" style="visibility: ">
+                            <!-- This is where an image will be displayed as a hint -->
+                            <img src="../word-guess-game/assets/images/hints/air-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                            <!-- <img src="../word-guess-game/assets/images/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/> -->
+                        </div>
                     </div>
                 </div>
 
                 <!-- GUESSED LETTERS -->
-                <div class="column" class="middle" class="guess" class="clearfix">
-                    <div class="guessed-letters">
-                        <h2>Guessed Letters</h2>
-                        <div>
-                            <h3 id="guessedLetters">...</h3>
+                <div class="column-middle">   
+                    <div class="guess" class="clearfix">
+                        <div class="guessed-letters">
+                            <h2>Guessed Letters</h2>
+                            <div>
+                                <h2 id="guessedLetters">...</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- GUESSES REMAINING -->
-                <div class="column" class="right" class="guesses-remaining">
-                    <h2>Guesses Remaining</h2>
-                        <h3 id="guessesRemaining">-</h3>
+                <div class="column-right">
+                    <div class="guesses-remaining">
+                        <h2>Guesses Remaining</h2>
+                            <h2 id="guessesRemaining">10</h2>
+                    </div>
                 </div>
+            
+            <!-- END ROW 2 -->
             </div>
 
             <!-- WIN SCREEN AND LOSE SCREEN -->

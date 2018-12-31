@@ -44,6 +44,7 @@ for (var letter in thePlant) {
         visible: false
     }
     plantLetters.push(letter);
+    document.getElementById('current-plant').innerHTML;
 }
 
 // Create event listener for when a key is pressed
@@ -108,7 +109,6 @@ if (guessesRemaining === 0) {
 }
 
 // These are the functions
-
 
 // Invoke a win
 function win() {

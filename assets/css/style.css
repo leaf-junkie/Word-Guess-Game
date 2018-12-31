@@ -54,7 +54,7 @@ div {
 
 /* Position the container that holds the main content */
 div.container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     top: 115px;
 }
@@ -64,62 +64,60 @@ div.row {
     background-color: transparent;
     width: 100%;
     float: left;
+    margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+div.row:after {
     content: "";
     display: table;
     clear: both;
 }
-
+/* 
 div.column {
+    background-color: transparent;
     float: left;
-    padding: 10px;
+} */
+
+div.column-left {
+    width: 25%;
+    float: left;
 }
 
-div.left, 
-div.right {
-    width: 25%;
+div.column-middle {
+  width: 49%;
+  margin: 0 auto;
+  left: 10px;
+  right: 10px;
+  float: left;
 }
-  
-div.middle {
-    width: 50%;
+
+div.column-right {
+    width: 25%;
+    float: right;
 }
 
 /* ROW 1 */
 /* Style the divs that hold the scoreboard */
 div.score {
-    width: 16%;
     left: 0;
-    float: left;
 }
 
 /* Style the div that holds the word */
 div.the-plant {
-    left: 2%;
-    right: 2%;
-    width: 55%;
+    width: 100%;
     margin: 0 auto;
-    float: left;
-    padding-top: 25px;
-    padding-bottom: 25px;
 }
 
 /* Style the leaf drop graphic */
-div.leaf-drop {
-    background-color: transparent;
-    width: 25%;
-    right: 0;
-    float: right;
-}
+/* div.leaf-drop {
+} */
 
 /* ROW 2 */
 /* Style the hint div */
 div.hint {
-    width: 16%;
     left: 0;
     float: left;
 }
@@ -129,41 +127,27 @@ div.hint-button,
 div.hint-img {
     background-color: transparent;
     opacity: 1;
+    margin: 10px;
 }
 
 /* Style the guessed letters div */
 div.guess {
-    left: 2%;
-    right: 2%;
-    width: 55%;
-    margin: 0 auto;
-    float: left;
+    margin: 10px;
 }
 
-div.guesses-remaining {
-    width: 25%;
-    right: 0;
-    float: right;
-}
+/* div.guesses-remaining {
+} */
 
 /* Style the text */
-h1 {
+h1, 
+h2 {
     color: #fff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 32px;
 }
 
 h2 {
-    color: #fff;
     font-family: monospace;
-    font-size: 24px;
-}
-
-h3 {
-    color: #fff;
-    font-family: monospace;
-    font-size: 24px;
-    margin-top: 0;
 }
 
 p {
