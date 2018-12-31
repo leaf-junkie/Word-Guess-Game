@@ -29,10 +29,10 @@
         <div class="container">
 
             <!-- ROW 1 -->
-            <div class="row-1" class="clearfix">
+            <div class="row" class="top" class="clearfix">
 
                 <!-- SCORE -->
-                <div class="score" class="clearfix">
+                <div class="column" class="left" class="score" class="clearfix">
                     <div class="win-count">
                         <h2 class="scoreboard">Wins</h2>
                         <div>
@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- WORD GUESSING AREA -->
-                <div class="the-plant" class="clearfix">
+                <div class="column" class="middle" class="the-plant" class="clearfix">
                     <h2>Name that plant!</h2>
                     <br>
                     <div>
@@ -57,28 +57,28 @@
                 </div>
     
                 <!-- LEAF DROP GRAPHIC -->
-                <div class="leaf-drop">
-                    <img src="../word-guess-game/assets/images/sprites/ficus-10.jpg" class="clearfix" style="max-width: 100%"/>
+                <div class="column" class="right" class="leaf-drop">
+                    <img src="../word-guess-game/assets/images/sprites/ficus-10.jpg" class="clearfix" class="right" style="max-width: 100%"/>
                 </div>
             </div>
 
             <!-- ROW 2 -->
-            <div class="row-2" class="clearfix">
+            <div class="row" class="bottom" class="clearfix">
 
                 <!-- HINT -->
-                <div class="hint">
+                <div class="column" class="left" class="hint">
                     <div class="hint-button">
                         <button>Hint</button>
                     </div>
                     <br>
-                    <div class="hint-img" style="visibility: hidden">
+                    <div class="hint-img" style="visibility: ">
                         <!-- This is where an image will be displayed as a hint -->
-                        <img src="https://i.pinimg.com/736x/aa/d5/fd/aad5fd9c4b16a73364bd2a8ead437a03--tropical-interior-plants-indoor.jpg" class="clearfix" style="max-width: 100%"/>
+                        <img src="../word-guess-game/assets/images/hints/air-plant.JPG" class="clearfix" style="max-width: 100%"/>
                     </div>
                 </div>
 
                 <!-- GUESSED LETTERS -->
-                <div class="guess" class="clearfix">
+                <div class="column" class="middle" class="guess" class="clearfix">
                     <div class="guessed-letters">
                         <h2>Guessed Letters</h2>
                         <div>
@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- GUESSES REMAINING -->
-                <div class="guesses-remaining">
+                <div class="column" class="right" class="guesses-remaining">
                     <h2>Guesses Remaining</h2>
                         <h3 id="guessesRemaining">-</h3>
                 </div>

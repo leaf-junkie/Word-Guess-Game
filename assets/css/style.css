@@ -60,13 +60,33 @@ div.container {
 }
 
 /* Position the rows */
-div.row-1,
-div.row-2 {
+div.row {
     background-color: transparent;
     width: 100%;
     float: left;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.column {
+    float: left;
+    padding: 10px;
+}
+
+div.left, 
+div.right {
+    width: 25%;
+}
+  
+div.middle {
+    width: 50%;
 }
 
 /* ROW 1 */
@@ -213,85 +233,3 @@ footer {
     clear: both;
     display: table;
 }
-
-/* Media Queries */
-/* Medium devices, like desktops and laptops */
-/* @media screen and (max-width: 1550px) {
-    body {
-        background-image: url(../images/smokeyquartz.jpg);
-    }
-    
-    .header {
-        height: 150px;
-    }
-
-    #header {
-        font-size: 100px;
-    }
-    
-    .lets-play {
-        font-size: 48px;
-    }
-
-    .container {
-        margin: 25px 400px;
-    }
-}
- */
-/* small devices, like tablets and e-readers */
-/* @media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-        background-image: url(../images/smokeyquartz.jpg);
-        line-height: 200%;
-    }
-
-    .lets-play {
-        font-size: 36px;
-    }
-
-    h2, 
-    h3 {
-        font-size: 24px;
-        text-shadow: 4px 4px 4px #222;
-    }
-
-    footer {
-        height: 100px;
-    }
-}
- */
-/* extra small devices, like smartphones */
-/* @media screen and (max-width: 480px) {
-    body {
-        line-height: 275%;
-        background-image: url(../images/smokeyquartz.jpg);
-        margin-top: 150px;
-    }
-
-    .header {
-        height: 150px;
-        padding-top: 35px;
-    }
-
-    #header {
-        font-size: 58px;
-    }
-
-    .lets-play,
-    h2 {
-        font-size: 22px;
-        text-shadow: 4px 4px 4px #222;
-    }
-
-    .container {
-        padding: 5px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    footer {
-        height: 75px;
-    }
-} */
