@@ -1,7 +1,7 @@
 body {
     text-align: center;
     line-height: 150%;
-    background-image: url(../images/lush-large.jpg);
+    background-image: url(../images/backgrounds/lush-medium.jpg);
     margin-top: 150px;
 }
 
@@ -108,6 +108,7 @@ div.hint,
 div.hint-button,
 div.hint-img {
     background-color: transparent;
+    opacity: 1;
 }
 
 /* Style the guessed letters div */
