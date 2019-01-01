@@ -1,3 +1,5 @@
+// alert('Press any key to begin!');
+
 // Select random plant name
 const plants =                     // Word list
     [   
@@ -44,7 +46,6 @@ for (var letter in thePlant) {
         visible: false
     }
     plantLetters.push(letter);
-    document.getElementById('current-plant').innerHTML;
 }
 
 // Create event listener for when a key is pressed
@@ -76,6 +77,7 @@ function keyUpHandler(event) {
     } else {
         // If it has been pressed, return false
         guessedLetters.push(event.key);
+            
     }
     
     // Show pressed keys in console
@@ -87,21 +89,27 @@ function keyUpHandler(event) {
     // Check if pressed letter is included in name of current plant 
     if (checkIfPlantHasLetter(event.key)) {
         // had the letter
+        
     } else {
         // did not have the letter
+
+        // Decrement guess count
+        guessesRemaining -= 1;
+        
+        // Display the number of remaining guesses under 'Guesses Remaining'
+        console.log('Number of guesses remaining: ' + guessesRemaining);
+        document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
+        
+        // Have one leaf fall from leaf drop graphic with each incorrect guess
     }
+
     // draw the letters
     drawLetters();
-    
+    document.getElementsByClassName('current-plant').innerHTML = plantLetters.join(' ');    
 }
 
 // When hint button is clicked, show relevant image
 
-// Have one leaf fall from leaf drop graphic with each incorrect guess
-
-// Display the number of remaining guesses under 'Guesses Remaining'
-console.log('Number of guesses remaining: ' + guessesRemaining);
-document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
 
 // If zero guesses left, lose (call a lose function) and reset guesses remaining
 if (guessesRemaining === 0) {
@@ -146,10 +154,10 @@ function reset() {
     guessedLetters = [];
     document.getElementById('guessedLetters').innerHTML = guessedLetters.join(', ');
     
-    // Select new magic letter
-    randomIndex = Math.floor(Math.random() * letters.length);
-    magicLetter = letters[randomIndex];
-    console.log(magicLetter);
+    // Select new plant
+    randomIndex = Math.floor(Math.random() * plants.length);
+    thePlant = plants[randomIndex];
+    console.log(thePlant);
 
     // Make win screen and lose screen hidden on reset
     winScreen.style.visibility = 'hidden';
@@ -168,7 +176,7 @@ function checkIfPlantHasLetter(guessedLetter) {
             hasLetter = true;
         }
     }
-
+    
     return hasLetter;
 }
 
@@ -183,6 +191,7 @@ function drawLetters() {
             // If not, draw an underscore in place of the letter
             html += '_';
         }
+        document.getElementsByClassName('current-plant').innerHTML = guessedLetters;
     }
     document.getElementsByClassName('the-plant').innerHTML = html;
 }
