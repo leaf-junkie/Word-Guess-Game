@@ -49,7 +49,7 @@
                         <h2>Name that plant!</h2>
                         <br>
                         <div>
-                            <h2 class="current-plant"></h2>
+                            <h2 id="current-plant">...</h2>
                         </div>
                     </div>
                 </div>
@@ -77,32 +77,31 @@
                         <div class="hint-img" style="visibility: ">
                             <!-- This is where an image will be displayed as a hint -->
                             <img src="../word-guess-game/assets/images/hints/air-plant.JPG" class="clearfix" style="max-width: 100%"/>
-                            <!-- <img src="../word-guess-game/assets/images/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/>
-                            <img src="../word-guess-game/assets/" class="clearfix" style="max-width: 100%"/> -->
+                            <!-- <img src="../word-guess-game/assets/images/hints/aloe.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/bird-of-paradise.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/burros-tail.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/cactus.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/devils-ivy.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/english-ivy.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/fiddle-leaf-fig.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/heartleaf-philodendron.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/jade-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/maidenhair-fern.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/monstera.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/peperomia.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/pilea-peperomioides.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/pinstripe-calathea.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/pothos.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/prayer-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/rattlesnake-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/rubber-plant.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/sansevieria.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/staghorn-fern.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/string-of-hearts.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/string-of-pearls.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/succulent.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/tillandsia.JPG" class="clearfix" style="max-width: 100%"/>
+                            <img src="../word-guess-game/assets/images/hints/zz-plant.JPG" class="clearfix" style="max-width: 100%"/> -->
                         </div>
                     </div>
                 </div>

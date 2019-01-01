@@ -3,32 +3,32 @@
 // Select random plant name
 const plants =                     // Word list
     [   
-        'monstera', 
-        'pothos', 
-        'string of hearts',
-        'english ivy',
-        'devils ivy',
-        'rubber plant',
-        'zz plant',
-        'fiddle leaf fig',
-        'succulent',
-        'maidenhair fern',
-        'jade plant',
-        'heartleaf philodendron',
-        'cactus',
-        'prayer plant',
-        'aloe',
-        'pinstripe calathea',
-        'bird of paradise',
-        'pilea peperomioides',
-        'rattlesnake plant',
-        'sansevieria',
         'air plant',
-        'tillandsia',
-        'staghorn fern',
+        'aloe',
+        'bird of paradise',
+        'burros tail', 
+        'cactus',
+        'devils ivy',
+        'english ivy',
+        'fiddle leaf fig',
+        'heartleaf philodendron',
+        'jade plant',
+        'maidenhair fern',
+        'monstera', 
         'peperomia',
+        'pilea peperomioides',
+        'pinstripe calathea',
+        'pothos', 
+        'prayer plant',
+        'rattlesnake plant',
+        'rubber plant',
+        'sansevieria',
+        'staghorn fern',
+        'string of hearts',
         'string of pearls',
-        'burros tail' 
+        'succulent',
+        'tillandsia',
+        'zz plant',
     ];
 
 // Use Math.floor to round the random number down to the nearest whole number
@@ -40,20 +40,20 @@ console.log(thePlant);
 
 // Create empty list for randomly selected plant and push to screen
 plantLetters = [];
-for (var letter in thePlant) {
+for (var i = 0; i < thePlant.length; i++) {
     var letterObject = {
-        value: letter,
+        value: thePlant.charAt(i),
         visible: false
     }
-    plantLetters.push(letter);
+    plantLetters.push(letterObject);
 }
-console.log('correctly guessed letters: ', plantLetters);
+console.log('plant letters: ', plantLetters);
 
 // Create event listener for when a key is pressed
 document.onkeyup = keyUpHandler
 
 // Move guessed letters into an array
-let letters = 'abcdefghijklmnopqrstuvwxyz';
+let letters = 'abcdefghijklmnopqrstuvwxyz ';
 letters = letters.toUpperCase();
 let guessedLetters = [];
 
@@ -169,9 +169,11 @@ function reset() {
 // Check if plant contains a letter and make correctly guessed letters visible
 function checkIfPlantHasLetter(guessedLetter) {
     var hasLetter = false;
-
+    console.log('checking if ' + guessedLetter + ' is in thePlant');
     // Loop over letters in plantLetters (for letter in plantLetters)
-    for (var letter in plantLetters) {
+    for (var i = 0; i < plantLetters.length; i++) {
+        var letter = plantLetters[i];
+        console.log('checking if ' + guessedLetter + ' is equal to ' + letter.value);
         // If the current letter is the guessedLetter, set visible to true, and hasLetter to true
         if (letter.value === guessedLetter) {
             letter.visible = true;
@@ -185,15 +187,26 @@ function checkIfPlantHasLetter(guessedLetter) {
 // Draw letters onto the screen
 function drawLetters() {
     var html = '';
-    for (var letter in plantLetters) {
-        if (letter.visible) {
-            html += letter.value;
+    // for (var letter in plantLetters) {
+    //     if (letter.visible) {
+    //         html += letter.value;
+    //     }
+    //     else {
+    //         // If not, draw an underscore in place of the letter
+    //         html += '_';
+    //     }
+    // }
+
+    for (var i = 0; i < plantLetters.length; i++) {
+        if (plantLetters[i].visible) {
+            html += plantLetters[i].value;
         }
         else {
             // If not, draw an underscore in place of the letter
             html += '_';
         }
-        document.getElementsByClassName('current-plant').innerHTML = guessedLetters;
     }
-    document.getElementsByClassName('the-plant').innerHTML = html;
+
+    console.log(html);
+    document.getElementById('current-plant').innerHTML = html;
 }
