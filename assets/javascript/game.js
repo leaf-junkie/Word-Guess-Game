@@ -47,6 +47,7 @@ for (var letter in thePlant) {
     }
     plantLetters.push(letter);
 }
+console.log('correctly guessed letters: ', plantLetters);
 
 // Create event listener for when a key is pressed
 document.onkeyup = keyUpHandler
@@ -105,7 +106,8 @@ function keyUpHandler(event) {
 
     // draw the letters
     drawLetters();
-    document.getElementsByClassName('current-plant').innerHTML = plantLetters.join(' ');    
+    document.getElementsByClassName('current-plant').innerHTML = plantLetters.join(' ');   
+    console.log('correctly guessed letters: ', plantLetters); 
 }
 
 // When hint button is clicked, show relevant image
