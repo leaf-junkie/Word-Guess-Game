@@ -38,16 +38,7 @@ let thePlant = plants[randomIndex];
 console.log(randomIndex);
 console.log(thePlant);
 
-// Create empty list for randomly selected plant and push to screen
-plantLetters = [];
-for (var i = 0; i < thePlant.length; i++) {
-    var letterObject = {
-        value: thePlant.charAt(i),
-        visible: false
-    }
-    plantLetters.push(letterObject);
-}
-console.log('plant letters: ', plantLetters);
+generatePlantLetters();
 
 // Create event listener for when a key is pressed
 document.onkeyup = keyUpHandler
@@ -104,30 +95,43 @@ function keyUpHandler(event) {
         // Have one leaf fall from leaf drop graphic with each incorrect guess
     }
 
-    // draw the letters
+    // draw the letters to the DOM
     drawLetters();
-    document.getElementsByClassName('current-plant').innerHTML = plantLetters.join(' ');   
-    console.log('correctly guessed letters: ', plantLetters); 
+    
+    // If all letters in the word have been guessed, win
+    var allLettersGuessed = true;
+    for (i = 0; i < plantLetters.length; i++) {
+        if (plantLetters[i].visible === false) {
+            allLettersGuessed = false;
+        }
+    }
+    if (allLettersGuessed) {
+        win();
+    }
+
+    // If zero guesses left, lose (call a lose function)
+    if (guessesRemaining === 0) {
+        lose();
+    }
 }
 
 // When hint button is clicked, show relevant image
 
 
-// If zero guesses left, lose (call a lose function) and reset guesses remaining
-if (guessesRemaining === 0) {
-    lose();
-}
 
 // These are the functions
 
 // Invoke a win
 function win() {
-    console.log('You win!');
     // Display number of wins in browser
     let wins = parseInt(document.getElementById('winCount').innerHTML);
+    
+    // Increase win count by 1
     wins += 1;
     document.getElementById('winCount').innerHTML = wins;
 
+    console.log('You win!');
+    
     // Display win screen
     let winScreen = document.getElementById('winScreen');
     winScreen.style.visibility = 'visible';
@@ -135,11 +139,14 @@ function win() {
 
 // Invoke a loss
 function lose() {
-    console.log('You lose!');
     // Display number of losses in browser
     let losses = parseInt(document.getElementById('lossCount').innerHTML);
+    
+    // Increase loss count by 1
     losses += 1;
+    
     document.getElementById('lossCount').innerHTML = losses;
+    console.log('You lose!');
     
     // Display lose screen
     let loseScreen = document.getElementById('loseScreen');
@@ -159,11 +166,14 @@ function reset() {
     // Select new plant
     randomIndex = Math.floor(Math.random() * plants.length);
     thePlant = plants[randomIndex];
-    console.log(thePlant);
+    console.log('Reset. New plant: ' + thePlant);
 
     // Make win screen and lose screen hidden on reset
     winScreen.style.visibility = 'hidden';
     loseScreen.style.visibility = 'hidden';
+
+    generatePlantLetters();
+    drawLetters();
 }
 
 // Check if plant contains a letter and make correctly guessed letters visible
@@ -187,15 +197,6 @@ function checkIfPlantHasLetter(guessedLetter) {
 // Draw letters onto the screen
 function drawLetters() {
     var html = '';
-    // for (var letter in plantLetters) {
-    //     if (letter.visible) {
-    //         html += letter.value;
-    //     }
-    //     else {
-    //         // If not, draw an underscore in place of the letter
-    //         html += '_';
-    //     }
-    // }
 
     for (var i = 0; i < plantLetters.length; i++) {
         if (plantLetters[i].visible) {
@@ -208,5 +209,18 @@ function drawLetters() {
     }
 
     console.log(html);
-    document.getElementById('current-plant').innerHTML = html;
+    document.getElementById('currentPlant').innerHTML = html;
+}
+
+function generatePlantLetters() {
+    // Create empty list for randomly selected plant and push to screen
+    plantLetters = [];
+    for (var i = 0; i < thePlant.length; i++) {
+        var letterObject = {
+            value: thePlant.charAt(i),
+            visible: false
+        }
+        plantLetters.push(letterObject);
+    }
+    console.log('plant letters: ', plantLetters);
 }

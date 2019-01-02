@@ -140,7 +140,8 @@ div.guess {
 
 /* Style the text */
 h1, 
-h2 {
+h2,
+h3 {
     color: #fff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 32px;
