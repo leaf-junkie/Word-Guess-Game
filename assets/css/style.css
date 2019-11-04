@@ -112,31 +112,34 @@ div.the-plant {
 }
 
 /* Style the leaf drop graphic */
-/* div.leaf-drop {
-} */
+.lose-a-leaf {
+    position: relative;
+}
 
 /* ROW 2 */
 /* Style the hint div */
 div.hint {
     left: 0;
-    float: left;
+    float: both;
 }
 
 div.hint,
 div.hint-button,
-div.hint-img {
-    background-color: transparent;
-    opacity: 1;
+div.hint-images {
     margin: 10px;
+    position: relative;
+}
+
+div.hint-img {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Style the guessed letters div */
 div.guess {
     margin: 10px;
 }
-
-/* div.guesses-remaining {
-} */
 
 /* Style the text */
 h1, 
