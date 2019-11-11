@@ -7,68 +7,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <section class="hero is-primary has-text-centered">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Leaf Drop</h1>
-                    <h2 class="subtitle">Use the letter keys and spacebar to guess the name of the houseplant before you lose your leaves!</h2>
-                </div>
-            </div>
-        </section>
 
         <!-- MAIN CONTENT -->
         <section class="section">
-            <div class="container card column is-three-quarters">
+            <div class="container card column is-half">
                 
-                <div class="card">
-                    <!-- SCORE -->
-                    <div class="score">
-                        <h1 class="card-header">Score</h1>
-                        <h2 class="scoreboard">Wins: <span id="winCount">0</span></h2>
-                        <h2 class="scoreboard">Losses: <span id="lossCount">0</span></h2>
+                <!-- Word guessing area -->
+                <div class="section">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <h2 class="card-header" id="guessesRemaining" style="font-size: 75px; padding:0 1rem;">10</h2>
+                                </div>
+                                <div class="media-content">
+                                    <!-- Guesses Remaining -->
+                                    <p class="title is-3" id="currentPlant"></p>
+                                    <!-- Guessed Letters -->
+                                    <!-- TODO: Display alphabet in bold, dark grey. When letter is guessed, make light grey and disable -->
+                                    <p class="subtitle is-5">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Leaf-drop Graphic -->
+                        <div class="card-image">
+                            <figure class="image is-square">
+                                <div id="leaf-drop">
+                                    <img class="lose-a-leaf" id="leaf10" src="./assets/images/sprites/ficus-10.jpg"/>
+                                    <img class="lose-a-leaf" id="leaf9" src="./assets/images/sprites/ficus-9.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf8" src="./assets/images/sprites/ficus-8.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf7" src="./assets/images/sprites/ficus-7.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf6" src="./assets/images/sprites/ficus-6.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf5" src="./assets/images/sprites/ficus-5.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf4" src="./assets/images/sprites/ficus-4.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf3" src="./assets/images/sprites/ficus-3.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf2" src="./assets/images/sprites/ficus-2.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf1" src="./assets/images/sprites/ficus-1.jpg" style="display: none;"/>
+                                    <img class="lose-a-leaf" id="leaf0" src="./assets/images/sprites/ficus-0.jpg" style="display: none;"/>
+                                </div>
+                            </figure>
+                        </div>
                     </div>
-                    <!-- GUESSED LETTERS -->
-                    <div class="card-header">   
+                </div>
+
+                <div class="section columns">
+
+                    <div class="card column is-half">
+                        <!-- Score -->
+                        <h1 class="card-header">Score</h1>
+                        <div class="score">
+                            <h2 class="scoreboard">Wins: <span id="winCount">0</span></h2>
+                            <h2 class="scoreboard">Losses: <span id="lossCount">0</span></h2>
+                        </div>
+                        <!-- Guessed Letters -->
                         <div class="guess">
                             <div class="guessed-letters">
-                                <h2>Guessed Letters</h2>
+                                <h2>Guessed Letters: </h2>
                                 <h2 id="guessedLetters">...</h2>
                             </div>
                         </div>
                     </div>
-                    <!-- GUESSES REMAINING -->
-                    <div class="card-header">
-                        <div class="guesses-remaining">
-                            <h2>Guesses Remaining</h2>
-                            <h2 id="guessesRemaining">10</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WORD GUESSING AREA -->
-                <div class="card">
-                    <h2 class="subtitle" id="currentPlant">...</h2>
-                </div>
-
-                <!-- LEAF DROP GRAPHIC -->
-                <div class="leaf-drop card">
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-10.jpg"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-9.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-8.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-7.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-6.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-5.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-4.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-3.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-2.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-1.jpg" style="display: none;"/>
-                    <img class="lose-a-leaf" src="../word-guess-game/assets/images/sprites/ficus-0.jpg" style="display: none;"/>
-                </div>
-
-                <div class="section">
-
-                    <!-- HINT -->
-                    <div class="hint">
+                    <!-- Hint -->
+                    <div class="card column is-half hint">
                         <a class="button">Hint</a>
                         <div class="hint-images">
                             <img class="hint-img" id="airPlant" z-index="10" src="../word-guess-game/assets/images/hints/air-plant.JPG" style="max-width: 100%; visibility: hidden;"/>
@@ -100,40 +100,30 @@
                         </div>
                     </div>                
                 </div>
-                </div>
-            </section>
-
-    
-                <!-- WIN SCREEN AND LOSE SCREEN -->
-                <div id="winScreen" style="visibility: hidden">
-                    <h1 class="endgame-heading">YOU WIN</h1>
-                    <p class="endgame-text">Nice job! Would you like to play again?</p>
-                    <button class="button" onclick="reset()">PLAY AGAIN</button>
-                </div>
-                <div id="loseScreen" style="visibility: hidden;">
-                    <h1 class="endgame-heading">GAME OVER</h1>
-                    <p class="endgame-text">You lost. Would you like to try again?</p>
-                    <button class="button" onclick="reset()">TRY AGAIN</button>
-                </div>
-            </div>
-    
-            <div class="modal" id="winModal">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <h1>YOU WIN!</h1>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-    
-            <div class="modal" id="loseModal">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <h1>GAME OVER</h1>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
             </div>
         </section>
 
+        <!-- WIN SCREEN / LOSE SCREEN -->
+        <div class="modal" id="winModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <h1>You won!</h1>
+                <p>Click to play again.</p>
+            </div>
+            <button class="button" onclick="reset()">PLAY</button>
+            <a class="modal-close is-large" href="./index.html" onclick="closeModals()" aria-label="close"></a>
+        </div>
+        <div class="modal" id="loseModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <h1>You lost!</h1>
+                <p>Click to play again.</p>
+            </div>
+            <button class="button" onclick="reset()">PLAY</button>
+            <a class="modal-close is-large" href="./index.html" onclick="closeModals()" aria-label="close"></a>
+        </div>
+
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>

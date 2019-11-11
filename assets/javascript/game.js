@@ -1,76 +1,160 @@
-// alert('Press any key to begin!');
-
-// Select random plant name
-// var plant = {
-//     name: "air plant", 
-//     index: "0", 
-//     src: "../word-guess-game/assets/images/hints/air-plant.JPG"
-// };
-
 const plantsArray =
     [   
-        'air plant',
-        'aloe',
-        'bird of paradise',
-        'burros tail', 
-        'cactus',
-        'devils ivy',
-        'english ivy',
-        'fiddle leaf fig',
-        'heartleaf philodendron',
-        'jade plant',
-        'maidenhair fern',
-        'monstera', 
-        'peperomia',
-        'pilea peperomioides',
-        'pinstripe calathea',
-        'pothos', 
-        'prayer plant',
-        'rattlesnake plant',
-        'rubber plant',
-        'sansevieria',
-        'staghorn fern',
-        'string of hearts',
-        'string of pearls',
-        'succulent',
-        'tillandsia',
-        'zz plant',
+        {
+            name: 'air plant',
+            url: '../word-guess-game/assets/images/hints/air-plant.JPG'
+        },
+        {
+            name: 'aloe',
+            url: '../word-guess-game/assets/images/hints/aloe.JPG'
+        },
+        {
+            name: 'bird of paradise',
+            url: '../word-guess-game/assets/images/hints/bird-of-paradise.JPG' 
+        },
+        {
+            name: 'burros tail',
+            url: '../word-guess-game/assets/images/hints/burros-tail.JPG' 
+        },
+        {
+            name: 'cactus',
+            url: '../word-guess-game/assets/images/hints/cactus.JPG' 
+        },
+        {
+            name: 'devils ivy',
+            url: '../word-guess-game/assets/images/hints/devils-ivy.JPG' 
+        },
+        {
+            name: 'english ivy',
+            url: '../word-guess-game/assets/images/hints/english-ivy.JPG' 
+        },
+        {
+            name: 'fiddle leaf fig',
+            url: '../word-guess-game/assets/images/hints/fiddle-leaf-fig.JPG' 
+        },
+        {
+            name: 'heartleaf philodendron',
+            url: '../word-guess-game/assets/images/hints/heartleaf-philodendron.JPG' 
+        },
+        {
+            name: 'jade plant',
+            url: '../word-guess-game/assets/images/hints/jade-plant.JPG' 
+        },
+        {
+            name: 'maidenhair fern',
+            url: '../word-guess-game/assets/images/hints/maidenhair-fern.JPG' 
+        },
+        {
+            name: 'monstera',
+            url: '../word-guess-game/assets/images/hints/monstera.JPG' 
+        },
+        {
+            name: 'peperomia',
+            url: '../word-guess-game/assets/images/hints/peperomia.JPG' 
+        },
+        {
+            name: 'pilea peperomioides',
+            url: '../word-guess-game/assets/images/hints/pilea-peperomioides.JPG' 
+        },
+        {
+            name: 'pinstripe calathea',
+            url: '../word-guess-game/assets/images/hints/pinstripe-calathea.JPG' 
+        },
+        {
+            name: 'pothos',
+            url: '../word-guess-game/assets/images/hints/pothos.JPG' 
+        },
+        {
+            name: 'prayer plant',
+            url: '../word-guess-game/assets/images/hints/prayer-plant.JPG' 
+        },   
+        {
+            name: 'rattlesnake plant',
+            url: '../word-guess-game/assets/images/hints/rattlesnake-plant.JPG' 
+        },
+        {
+            name: 'rubber plant',
+            url: '../word-guess-game/assets/images/hints/rubber-plant.JPG' 
+        },
+        {
+            name: 'sansevieria',
+            url: '../word-guess-game/assets/images/hints/sansevieria.JPG' 
+        },
+        {
+            name: 'staghorn fern',
+            url: '../word-guess-game/assets/images/hints/staghorn-fern.JPG'
+        },
+        {
+            name: 'string of hearts',
+            url: '../word-guess-game/assets/images/hints/string-of-hearts.JPG'
+        },       
+        {
+            name: 'string of pearls',
+            url: '../word-guess-game/assets/images/hints/string-of-pearls.JPG'
+        },
+        {
+            name: 'succulent',
+            url: '../word-guess-game/assets/images/hints/succulent.JPG'
+        },       
+        {
+            name: 'tillandsia',
+            url: '../word-guess-game/assets/images/hints/tillandsia.JPG'
+        },
+        {
+            name: 'zz plant',
+            url: '../word-guess-game/assets/images/hints/zz-plant.JPG'
+        }    
     ];
 
-    // // These are the image links - Include these as object properties
-    // <img class="hint-img" id="airPlant" z-index="10" src="../word-guess-game/assets/images/hints/air-plant.JPG" class="clearfix" style="max-width: 100%; visibility: "/>
-    // <img class="hint-img" id="aloe" z-index="20" src="../word-guess-game/assets/images/hints/aloe.JPG" class="clearfix" style="max-width: 100%; visibility: "/>
-    // <img class="hint-img" id="birdOfParadise" z-index="30" src="../word-guess-game/assets/images/hints/bird-of-paradise.JPG" class="clearfix" style="max-width: 100%; visibility: "/>
-    // <img class="hint-img" id="burrosTail" z-index="4" src="../word-guess-game/assets/images/hints/burros-tail.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="cactus" z-index="5" src="../word-guess-game/assets/images/hints/cactus.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="devilsIvy" z-index="6" src="../word-guess-game/assets/images/hints/devils-ivy.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="englishIvy" z-index="7" src="../word-guess-game/assets/images/hints/english-ivy.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="fiddleLeafFig" z-index="8" src="../word-guess-game/assets/images/hints/fiddle-leaf-fig.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="heartleafPhilodendron" z-index="9" src="../word-guess-game/assets/images/hints/heartleaf-philodendron.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="jadePlant" z-index="10" src="../word-guess-game/assets/images/hints/jade-plant.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="maidenhairFern" z-index="11" src="../word-guess-game/assets/images/hints/maidenhair-fern.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="monstera" z-index="12" src="../word-guess-game/assets/images/hints/monstera.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="peperomia" z-index="13" src="../word-guess-game/assets/images/hints/peperomia.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="pileaPeperomioides" z-index="14" src="../word-guess-game/assets/images/hints/pilea-peperomioides.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="pinstripeCalathea" z-index="15" src="../word-guess-game/assets/images/hints/pinstripe-calathea.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="posthos" z-index="16" src="../word-guess-game/assets/images/hints/pothos.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="prayerPlant" z-index="17" src="../word-guess-game/assets/images/hints/prayer-plant.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="rattlesnakePlant" z-index="18" src="../word-guess-game/assets/images/hints/rattlesnake-plant.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="rubberPlant" z-index="19" src="../word-guess-game/assets/images/hints/rubber-plant.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="sansevieria" z-index="20" src="../word-guess-game/assets/images/hints/sansevieria.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="staghornFern" z-index="21" src="../word-guess-game/assets/images/hints/staghorn-fern.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="stringOfHearts" z-index="22" src="../word-guess-game/assets/images/hints/string-of-hearts.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="stringOfPearls" z-index="23" src="../word-guess-game/assets/images/hints/string-of-pearls.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="succulent" z-index="24" src="../word-guess-game/assets/images/hints/succulent.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="tillandsia" z-index="25" src="../word-guess-game/assets/images/hints/tillandsia.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
-    // <img class="hint-img" id="zzPlant" z-index="26" src="../word-guess-game/assets/images/hints/zz-plant.JPG" class="clearfix" style="max-width: 100%; visibility: hidden"/>
+const leafdropGraphicArray = [
+    {
+        id: 'leafdrop10',
+        url: './assets/images/sprites/ficus-10.jpg'
+    },
+    {
+        id: 'leafdrop9',
+        url: './assets/images/sprites/ficus-9.jpg'
+    },
+    {
+        id: 'leafdrop8',
+        url: './assets/images/sprites/ficus-8.jpg'
+    },
+    {
+        id: 'leafdrop7',
+        url: './assets/images/sprites/ficus-7.jpg'
+    },
+    {
+        id: 'leafdrop6',
+        url: './assets/images/sprites/ficus-6.jpg'
+    },
+    {
+        id: 'leafdrop5',
+        url: './assets/images/sprites/ficus-5.jpg'
+    },
+    {
+        id: 'leafdrop4',
+        url: './assets/images/sprites/ficus-4.jpg'
+    },
+    {
+        id: 'leafdrop3',
+        url: './assets/images/sprites/ficus-3.jpg'
+    },
+    {
+        id: 'leafdrop2',
+        url: './assets/images/sprites/ficus-2.jpg'
+    },
+    {
+        id: 'leafdrop1',
+        url: './assets/images/sprites/ficus-1.jpg'
+    },
+    {
+        id: 'leafdrop0',
+        url: './assets/images/sprites/ficus-0.jpg'
+    }
+];
 
-// Use Math.floor to round the random number down to the nearest whole number
 let randomIndex = Math.floor(Math.random() * plantsArray.length);
 let thePlant = plantsArray[randomIndex];
-// Print these values to the console
-console.log(randomIndex);
-console.log(thePlant);
 
 generatePlantLetters();
 
@@ -86,47 +170,29 @@ let guessedLetters = [];
 let guessesRemaining = 10;
 document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
 
-// This is the game logic
-
 // Get input from user when a key is pressed
 function keyUpHandler(event) {
     // Filter non letters
-    if (!letters.includes(event.key.toUpperCase())) {
-        return;
-    }
-    
+    if (!letters.includes(event.key.toUpperCase())) return;
     // Ignore redundant input from user
-    // On key press, check if the letter has already been pressed
     if (guessedLetters.includes(event.key)) {
-        // If it has not been pressed, return true
-        return;
     } else {
-        // If it has been pressed, return false
-        guessedLetters.push(event.key);
-            
+        guessedLetters.push(event.key);    
     }
-    
-    // Show pressed keys in console
-    console.log('Key pressed: ' + guessedLetters);
-    
+        
     // Display the letters that have been guessed
     document.getElementById('guessedLetters').innerHTML = guessedLetters.join(', ');
     
     // Check if pressed letter is included in name of current plant 
     if (checkIfPlantHasLetter(event.key)) {
-        // had the letter
-        
     } else {
-        // did not have the letter
-
         // Decrement guess count
         guessesRemaining -= 1;
-        
         // Display the number of remaining guesses under 'Guesses Remaining'
         console.log('Number of guesses remaining: ' + guessesRemaining);
         document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
-        
-        // Have one leaf fall from leaf drop graphic with each incorrect guess
+        // TODO: Update leaf-drop graphic
+        // document.getElementById('leaf-drop').src=`${currentGraphic}`;
     }
 
     // draw the letters to the DOM
@@ -150,8 +216,18 @@ function keyUpHandler(event) {
 }
 
 // TODO: When hint button is clicked, show relevant image
-// -
 
+
+// Close modals
+function closeModals() {
+    winModal.style.visibility = 'hidden';
+    loseModal.style.visibility = 'hidden';
+
+    // const modal = document.getElementsByClassName('modal');
+    // modal.classList.remove('is-active');
+    // modal.setAttribute('aria-hidden', 'true');
+    // modal.setAttribute('style', 'display: none');
+}
 
 // Invoke a win
 function win() {
@@ -166,9 +242,6 @@ function win() {
     
     // Display win modal
     document.getElementById('winModal').classList.add('is-active');
-
-    // let winScreen = document.getElementById('winScreen');
-    // winScreen.style.visibility = 'visible';
 }
 
 // Invoke a loss
@@ -184,9 +257,6 @@ function lose() {
     
     // Display lose modal
     document.getElementById('loseModal').classList.add('is-active');
-
-    // let loseScreen = document.getElementById('loseScreen');
-    // loseScreen.style.visibility = 'visible';
 }
 
 // Reset the word when the game ends
@@ -204,13 +274,14 @@ function reset() {
     thePlant = plantsArray[randomIndex];
     console.log('Reset. New plant: ' + thePlant);
 
-    // Make win screen and lose screen hidden on reset
-    winScreen.style.visibility = 'hidden';
-    loseScreen.style.visibility = 'hidden';
+    // Hide modals
+    winModal.style.visibility = 'hidden';
+    loseModal.style.visibility = 'hidden';
 
     generatePlantLetters();
     drawLetters();
 }
+
 
 // Check if plant contains a letter and make correctly guessed letters visible
 function checkIfPlantHasLetter(guessedLetter) {
