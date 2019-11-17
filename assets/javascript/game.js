@@ -1,108 +1,134 @@
 const plantsArray =
     [   
         {
+            id: "airPlant",
             name: 'air plant',
-            url: '../word-guess-game/assets/images/hints/air-plant.JPG'
+            url: './assets/images/hints/air-plant.JPG'
         },
         {
+            id: "aloe",
             name: 'aloe',
-            url: '../word-guess-game/assets/images/hints/aloe.JPG'
+            url: './assets/images/hints/aloe.JPG'
         },
         {
+            id: "birdOfParadise",
             name: 'bird of paradise',
-            url: '../word-guess-game/assets/images/hints/bird-of-paradise.JPG' 
+            url: './assets/images/hints/bird-of-paradise.JPG' 
         },
         {
+            id: "burrosTail",
             name: 'burros tail',
-            url: '../word-guess-game/assets/images/hints/burros-tail.JPG' 
+            url: './assets/images/hints/burros-tail.JPG' 
         },
         {
+            id: "cactus",
             name: 'cactus',
-            url: '../word-guess-game/assets/images/hints/cactus.JPG' 
+            url: './assets/images/hints/cactus.JPG' 
         },
         {
+            id: "devilsIvy",
             name: 'devils ivy',
-            url: '../word-guess-game/assets/images/hints/devils-ivy.JPG' 
+            url: './assets/images/hints/devils-ivy.JPG' 
         },
         {
+            id: "englishIvy",
             name: 'english ivy',
-            url: '../word-guess-game/assets/images/hints/english-ivy.JPG' 
+            url: './assets/images/hints/english-ivy.JPG' 
         },
         {
+            id: "fiddleLeafFig",
             name: 'fiddle leaf fig',
-            url: '../word-guess-game/assets/images/hints/fiddle-leaf-fig.JPG' 
+            url: './assets/images/hints/fiddle-leaf-fig.JPG' 
         },
         {
+            id: "heartleafPhilodendron",
             name: 'heartleaf philodendron',
-            url: '../word-guess-game/assets/images/hints/heartleaf-philodendron.JPG' 
+            url: './assets/images/hints/heartleaf-philodendron.JPG' 
         },
         {
+            id: "jadePlant",
             name: 'jade plant',
-            url: '../word-guess-game/assets/images/hints/jade-plant.JPG' 
+            url: './assets/images/hints/jade-plant.JPG' 
         },
         {
+            id: "maidenhairFern",
             name: 'maidenhair fern',
-            url: '../word-guess-game/assets/images/hints/maidenhair-fern.JPG' 
+            url: './assets/images/hints/maidenhair-fern.JPG' 
         },
         {
+            id: "monstera",
             name: 'monstera',
-            url: '../word-guess-game/assets/images/hints/monstera.JPG' 
+            url: './assets/images/hints/monstera.JPG' 
         },
         {
+            id: "peperomia",
             name: 'peperomia',
-            url: '../word-guess-game/assets/images/hints/peperomia.JPG' 
+            url: './assets/images/hints/peperomia.JPG' 
         },
         {
+            id: "pileaPeperomioides",
             name: 'pilea peperomioides',
-            url: '../word-guess-game/assets/images/hints/pilea-peperomioides.JPG' 
+            url: './assets/images/hints/pilea-peperomioides.JPG' 
         },
         {
+            id: "pinstripeCalathea",
             name: 'pinstripe calathea',
-            url: '../word-guess-game/assets/images/hints/pinstripe-calathea.JPG' 
+            url: './assets/images/hints/pinstripe-calathea.JPG' 
         },
         {
+            id: "pothos",
             name: 'pothos',
-            url: '../word-guess-game/assets/images/hints/pothos.JPG' 
+            url: './assets/images/hints/pothos.JPG' 
         },
         {
+            id: "prayerPlant",
             name: 'prayer plant',
-            url: '../word-guess-game/assets/images/hints/prayer-plant.JPG' 
+            url: './assets/images/hints/prayer-plant.JPG' 
         },   
         {
+            id: "rattlesnakePlant",
             name: 'rattlesnake plant',
-            url: '../word-guess-game/assets/images/hints/rattlesnake-plant.JPG' 
+            url: './assets/images/hints/rattlesnake-plant.JPG' 
         },
         {
+            id: "rubberPlant",
             name: 'rubber plant',
-            url: '../word-guess-game/assets/images/hints/rubber-plant.JPG' 
+            url: './assets/images/hints/rubber-plant.JPG' 
         },
         {
+            id: "sansevieria",
             name: 'sansevieria',
-            url: '../word-guess-game/assets/images/hints/sansevieria.JPG' 
+            url: './assets/images/hints/sansevieria.JPG' 
         },
         {
+            id: "staghornFern",
             name: 'staghorn fern',
-            url: '../word-guess-game/assets/images/hints/staghorn-fern.JPG'
+            url: './assets/images/hints/staghorn-fern.JPG'
         },
         {
+            id: "stringOfHearts",
             name: 'string of hearts',
-            url: '../word-guess-game/assets/images/hints/string-of-hearts.JPG'
+            url: './assets/images/hints/string-of-hearts.JPG'
         },       
         {
+            id: "stringOfPearls",
             name: 'string of pearls',
-            url: '../word-guess-game/assets/images/hints/string-of-pearls.JPG'
+            url: './assets/images/hints/string-of-pearls.JPG'
         },
         {
+            id: "succulent",
             name: 'succulent',
-            url: '../word-guess-game/assets/images/hints/succulent.JPG'
+            url: './assets/images/hints/succulent.JPG'
         },       
         {
+            id: "tillandsia",
             name: 'tillandsia',
-            url: '../word-guess-game/assets/images/hints/tillandsia.JPG'
+            url: './assets/images/hints/tillandsia.JPG'
         },
         {
+            id: "zzPlant",
             name: 'zz plant',
-            url: '../word-guess-game/assets/images/hints/zz-plant.JPG'
+            url: './assets/images/hints/zz-plant.JPG'
         }    
     ];
 
@@ -154,7 +180,7 @@ const leafdropGraphicArray = [
 ];
 
 let randomIndex = Math.floor(Math.random() * plantsArray.length);
-let thePlant = plantsArray[randomIndex];
+let currentPlant = plantsArray[randomIndex];
 
 generatePlantLetters();
 
@@ -189,7 +215,7 @@ function keyUpHandler(event) {
         // Decrement guess count
         guessesRemaining -= 1;
         // Display the number of remaining guesses under 'Guesses Remaining'
-        console.log('Number of guesses remaining: ' + guessesRemaining);
+        console.log('Remaining guesses: ' + guessesRemaining);
         document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
         // TODO: Update leaf-drop graphic
         // document.getElementById('leaf-drop').src=`${currentGraphic}`;
@@ -199,7 +225,7 @@ function keyUpHandler(event) {
     drawLetters();
     
     // If all letters in the word have been guessed, win
-    var allLettersGuessed = true;
+    var allLettersGuessed = false;
     for (i = 0; i < plantLetters.length; i++) {
         if (plantLetters[i].visible === false) {
             allLettersGuessed = false;
@@ -215,31 +241,87 @@ function keyUpHandler(event) {
     }
 }
 
-// TODO: When hint button is clicked, show relevant image
+function changeLeafDropGraphic() {
+    switch(guessesRemaining) {
+        case 0: 
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf0').setAttribute('style', 'display: block');
+            break;
+        case 1:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf1').setAttribute('style', 'display: block');
+            break;
+        case 2:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf2').setAttribute('style', 'display: block');
+            break;
+        case 3:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf3').setAttribute('style', 'display: block');
+            break;
+        case 4:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf4').setAttribute('style', 'display: block');
+            break;
+        case 5:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf5').setAttribute('style', 'display: block');
+            break;
+        case 6:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf6').setAttribute('style', 'display: block');
+            break;
+        case 7:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf7').setAttribute('style', 'display: block');
+            break;
+        case 8:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf8').setAttribute('style', 'display: block');
+            break;
+        case 9:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf9').setAttribute('style', 'display: block');
+            break;
+        case 10:
+            document.getElementsByClassName('lose-a-leaf').setAttribute('style', 'display: none');
+            document.getElementById('leaf10').setAttribute('style', 'display: block');
+            break;
+        // default: document.getElementById('leaf10').setAttribute('style', 'display: block');
+        default: return;
+    }
+}
+// // When hint button is clicked, show relevant image
+// function showHint() {
+//     // add event listener to hint button to listen for clicks
+//     document.getElementsByClassName('hint-img')
+//         // show the appropriate image
+//         for (let i = 0; i < 0; i++) {
+//             // if current plant is equal to plantsArray name, 
+//             if (currentPlant == plantsArray[i].name) {
+//                 // then the object's id is equal to the hint's id
+//                 document.getElementById(plantsArray[i].id).style.display = 'block';
+//             } 
+//             else return;
+//         }
+//     );
+// }
 
 
 // Close modals
 function closeModals() {
     winModal.style.visibility = 'hidden';
     loseModal.style.visibility = 'hidden';
-
-    // const modal = document.getElementsByClassName('modal');
-    // modal.classList.remove('is-active');
-    // modal.setAttribute('aria-hidden', 'true');
-    // modal.setAttribute('style', 'display: none');
 }
 
 // Invoke a win
 function win() {
     // Display number of wins in browser
     let wins = parseInt(document.getElementById('winCount').innerHTML);
-    
     // Increase win count by 1
     wins += 1;
     document.getElementById('winCount').innerHTML = wins;
-
-    console.log('win');
-    
+    console.log('Win');
     // Display win modal
     document.getElementById('winModal').classList.add('is-active');
 }
@@ -248,13 +330,10 @@ function win() {
 function lose() {
     // Display number of losses in browser
     let losses = parseInt(document.getElementById('lossCount').innerHTML);
-    
     // Increase loss count by 1
     losses += 1;
-    
     document.getElementById('lossCount').innerHTML = losses;
-    console.log('lose');
-    
+    console.log('Lose');
     // Display lose modal
     document.getElementById('loseModal').classList.add('is-active');
 }
@@ -271,8 +350,8 @@ function reset() {
     
     // Select new plant
     randomIndex = Math.floor(Math.random() * plantsArray.length);
-    thePlant = plantsArray[randomIndex];
-    console.log('Reset. New plant: ' + thePlant);
+    currentPlant = plantsArray[randomIndex];
+    console.log('Reset. New plant: ' + currentPlant);
 
     // Hide modals
     winModal.style.visibility = 'hidden';
@@ -281,7 +360,6 @@ function reset() {
     generatePlantLetters();
     drawLetters();
 }
-
 
 // Check if plant contains a letter and make correctly guessed letters visible
 function checkIfPlantHasLetter(guessedLetter) {
@@ -316,9 +394,9 @@ function drawLetters() {
 function generatePlantLetters() {
     // Create empty list for randomly selected plant and push to screen
     plantLetters = [];
-    for (var i = 0; i < thePlant.length; i++) {
+    for (var i = 0; i < currentPlant.length; i++) {
         var letterObject = {
-            value: thePlant.charAt(i),
+            value: currentPlant.charAt(i),
             visible: false
         }
         plantLetters.push(letterObject);
